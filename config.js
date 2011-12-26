@@ -6,6 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
+log('config');
 Config.mysql = {
 	host: 'localhost',
 	user: 'mschwartz',
@@ -13,3 +14,4 @@ Config.mysql = {
 	db: 'ext4'
 };
 Config.documentRoot = 'docroot';
+Config.numChildren = 25;
