@@ -1,0 +1,16 @@
+<!doctype html>
+<% var ext = '/ext-4.1.0-beta-1'; %>
+<html>
+	<head>
+		<title>Schema / ExtJS Demo</title>
+		<link rel="stylesheet" type="text/css" href="<%= ext %>/resources/css/ext-all.css" />
+	</head>
+	<body>
+	<script type="text/javascript" src="<%= ext %>/ext-all.js"></script>
+	<script type="text/javascript" src="/client/Ext.ux.SchemaGrid.js"></script>
+	<script type="text/javascript" src="/client/Viewport.js"></script>
+	<script type="text/javascript">
+		Schemas =  <%= Json.encode(Schema.getSchemaExtJs()) %>;
+	</script>
+	</body>
+</html>
