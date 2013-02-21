@@ -7,7 +7,7 @@
  */
 
 include('config.js');
-var MySQL = require('Mysql').MySQL,
+var MySQL = require('MySQL').MySQL,
 	Schema = require('Schema');
 
 SQL = new MySQL();
