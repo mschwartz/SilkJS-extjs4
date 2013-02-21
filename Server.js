@@ -6,6 +6,10 @@
  * To change this template use File | Settings | File Templates.
  */
 
+include('config.js');
+var MySQL = require('Mysql').MySQL,
+	Schema = require('Schema');
+
 SQL = new MySQL();
 SQL.connect();
 
@@ -17,6 +21,7 @@ Schema.add({
 		{ name: 'password', type: 'varchar', size: 64, header: 'Password', serverOnly: true, editable: true },
 		{ name: 'email', type: 'varchar', size: 128, header: 'E-Mail Address', width: 128, editable: true },
 		{ name: 'phone', type: 'varchar', size: 128, header: 'Phone Number', width: 128, editable: true },
+		{ name: 'mobile', type: 'varchar', size: 128, header: 'Mobile Number', width: 128, editable: true },
 		{ name: 'created', type: 'int', defaultValue: function() { return parseInt(new Date().getTime() / 1000, 10); }, header: 'Created', width: 150, format: 'DateTime', editable: false }
 	],
 	primaryKey: 'userId',
@@ -26,8 +31,8 @@ Schema.add({
 	]
 });
 
-mysql.close();
-delete SQL;
+SQL.close();
+// delete SQL;
 
 function Server_action() {
 	switch (req.data.method) {
